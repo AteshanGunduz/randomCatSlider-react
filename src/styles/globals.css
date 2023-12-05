@@ -1,0 +1,72 @@
+.header{
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.slider{
+  width: 80%;
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider img{
+  border-radius: 1rem;
+}
+
+.slider button{
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 1000;
+  background: none;
+  cursor: pointer;
+  padding: 0 15rem;
+}
+
+.slider button:hover{
+  scale: 1.2;
+}
+
+/* Sliding effect part */
+
+.imgContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-left {
+  animation: slideLeft 0.5s forwards;
+}
+
+.slide-right {
+  animation: slideRight 0.5s forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
